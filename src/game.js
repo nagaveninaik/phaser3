@@ -25,16 +25,19 @@ class MyGame extends Phaser.Scene
         this.boy = this.add.image(375,700,'boy');
         
         // console.log(this.boy)
-        let Boy = this.boy
-        let that = this
+        let Boy = this.boy;
+        let that = this;
+        
    
        
         this.boy.setInteractive().on("pointerdown", function (pointer, localX, localY, event) {
             // console.log(Boy)
             // console.log(this.boy)
+           
             let move =  that.tweens.add({
                 targets: Boy,
-                x: 450,
+                x: Math.random(),
+                //y: Math.random(),
                 duration: 1000,
                 ease: "Power2",
                 yoyo: true,
